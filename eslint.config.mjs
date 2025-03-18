@@ -47,4 +47,10 @@ export default [
       },
     },
   },
+  //GLOBALS
+  {
+    globals: {
+      process: true,
+    },
+  },
 ];
