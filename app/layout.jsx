@@ -4,8 +4,6 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { useUserStore } from "@/store/use-user-store";
-import { Plus } from "lucide-react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
