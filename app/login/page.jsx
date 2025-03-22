@@ -55,7 +55,7 @@ export default function LoginPage() {
           }}
           className="flex items-center gap-2"
         >
-          <Input type="text" placeHolder="Enter your name" name="userName" />
+          <Input type="text" placeholder="Enter your name" name="userName" />
           <Button type="submit" className="bg-green-600 hover:bg-green-800">
             Login
           </Button>
