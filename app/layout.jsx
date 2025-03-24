@@ -23,21 +23,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full overflow-hidden">
       <body
         className={cn(
           geistSans.variable,
           geistMono.variable,
-          "antialiased",
-          "h-full",
+          "h-full overflow-hidden antialiased",
         )}
       >
         <Toaster />
         <div className="m-auto flex h-screen max-w-md flex-col border-x">
           <Header />
-          <main className="max-h-[calc(100%_-_100px)] flex-1 p-4">
-            {children}
-          </main>
+          {/* Assure que `main` puisse défiler sans affecter le reste */}
+          <main className="flex-1 overflow-y-auto p-4">{children}</main>
           <Footer />
         </div>
       </body>

@@ -7,7 +7,7 @@ import { Trash2 } from "lucide-react";
 import { Minus } from "lucide-react";
 import React from "react";
 
-export default function Item({ item }) {
+export const Item = ({ item }) => {
   return (
     <div
       className={cn("group relative h-fit rounded-md border p-3 shadow-inner")}
@@ -25,7 +25,7 @@ export default function Item({ item }) {
       </div>
     </div>
   );
-}
+};
 
 const CartButton = ({ item }) => {
   const cartItems = useCartStore((s) => s.items);

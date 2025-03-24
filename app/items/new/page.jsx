@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/select";
 import Image from "next/image";
 import { CATEGORIES } from "@/lib/categories";
-import InputImagePreview from "@/features/images/InputImagePreview";
+import InputImagePreview from "@/components/features/images/InputImagePreview";
 import { setItem } from "@/lib/items/set-item";
 import { getId } from "@/lib/get-id";
 import { useUserStore } from "@/store/use-user-store";

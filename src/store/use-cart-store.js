@@ -52,3 +52,12 @@ export const useCartQuantity = () => {
     );
   });
 };
+
+export const useCartPrice = () => {
+  return useCartStore((s) => {
+    return Object.values(s.items).reduce((total, item) => {
+      const price = item.item?.price || 0;
+      return total + item.quantity * price;
+    }, 0);
+  });
+};

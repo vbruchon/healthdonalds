@@ -10,8 +10,12 @@ const compat = new FlatCompat();
 
 export default [
   { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
-  { languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } } },
-  { languageOptions: { globals: globals.browser } },
+  {
+    languageOptions: {
+      parserOptions: { ecmaFeatures: { jsx: true } },
+      globals: { process: true, ...globals.browser }, // Déplace ici
+    },
+  },
   pluginJs.configs.recommended,
   // Tailwind
   ...tailwind.configs["flat/recommended"],
@@ -45,12 +49,6 @@ export default [
       react: {
         version: "detect", // Cela permettra à eslint de détecter automatiquement la version de React
       },
-    },
-  },
-  //GLOBALS
-  {
-    globals: {
-      process: true,
     },
   },
 ];
